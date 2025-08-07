@@ -24,7 +24,7 @@ fn main() {
 fn message_analyzer(message: &str) {
     
     // Let's the user know the program is working.
-    println!("===========================================================================================================================");
+    println!("=========================================================================================================================");
     println!("Analysing your message: {}", message);
 
     // Splits the sentence into words.
