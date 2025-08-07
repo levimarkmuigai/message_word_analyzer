@@ -24,7 +24,8 @@ fn main() {
 fn message_analyzer(message: &str) {
     
     // Let's the user know the program is working.
-    println!("Analysing your message {}", message);
+    println!("===========================================================================================================================");
+    println!("Analysing your message: {}", message);
 
     // Splits the sentence into words.
     let words = message.split_whitespace();
@@ -81,8 +82,8 @@ fn pattern_analyzer(words: &[&str]) -> (usize, usize, Vec<String>, HashSet<Strin
     // Creates an empty Vec to store long words.
     let mut twelve_or_more_words_vec = Vec::new();
 
-    // Creates an empty space for comparison to current word.
-    let mut last_word = "";
+    // Creates a set for comparison to current word.
+    let mut seen_words = HashSet::new();
 
     // Starts of the count for repeated words
     let mut repeated_words_count = 0;
@@ -105,15 +106,17 @@ fn pattern_analyzer(words: &[&str]) -> (usize, usize, Vec<String>, HashSet<Strin
                                                             // converts it from  a String slice to string.
         };
 
-        // Checks if words are repeated ignoring the case.
-        if word.eq_ignore_ascii_case(last_word) {
+
+        // Changes words to lowercase
+        let word_lower = word.to_lowercase();
+
+        // 
+        if !seen_words.insert(word_lower.clone()) {
             repeated_words_count += 1; // Updates count if words are the same
 
-            repeated_words_set.insert(word.to_string());
+            repeated_words_set.insert(word_lower);
             
         }
-
-        last_word = word; // updates the last word to already checked word each iteration
     }
 
     
