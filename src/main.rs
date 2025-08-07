@@ -100,7 +100,7 @@ fn pattern_analyzer(words: &[&str]) -> (usize, usize, Vec<String>, HashSet<Strin
         if word.len() >= 12 {
             twelve_or_more_count += 1; // Updates count if the word 
                                        // is 12 charcters or more.
-                                       //
+                            
             twelve_or_more_words_vec.push(word.to_string()); // Clones the long word to the Vec and
                                                             // converts it from  a String slice to string.
         };
