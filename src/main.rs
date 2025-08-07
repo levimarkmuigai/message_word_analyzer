@@ -110,7 +110,7 @@ fn pattern_analyzer(words: &[&str]) -> (usize, usize, Vec<String>, HashSet<Strin
         // Changes words to lowercase
         let word_lower = word.to_lowercase();
 
-        // 
+        // Adds a word into the set if not seen previously 
         if !seen_words.insert(word_lower.clone()) {
             repeated_words_count += 1; // Updates count if words are the same
 
