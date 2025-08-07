@@ -29,7 +29,7 @@ cd message_word_analyzer/src
 cargo run
 ```
 
-## 🧏🏾‍♀️ Example input and out put
+## 🧏🏾‍♀️ Example input and output
 ```sh
   cargo run
    Compiling message_word_analyzer v0.1.0 (/home/levi/Projects/Rust/message_word_analyzer)
