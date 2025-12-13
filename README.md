@@ -12,7 +12,7 @@ message_word_analyzer/
 ├── src/
 │   └── main.rs      // Main program logic
 ├── Cargo.toml       // Rust project config
-└── README.md        // Current file
+└── README.md        // This file
 ```
 
 ## 🏃🏾‍♂️‍➡️ How to run
